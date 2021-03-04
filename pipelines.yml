@@ -11,7 +11,7 @@ resources:
     type: Image
     configuration:
       registry: ARTIFACTORY                                # <-- replace with your artifactory integration
-      sourceRepository: ARTIFACTORY               # <-- required if registry is Artifactory
+      sourceRepository: soleng-docker-dev-local            # <-- required if registry is Artifactory
       imageName: vjnpipelines.jfrog.io/artifactory/soleng-docker-dev-local/dbp  # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
@@ -70,7 +70,7 @@ pipelines:
       - name: promote_dbp_build
         type: PromoteBuild
         configuration:
-          targetRepository: demo-pipelines
+          targetRepository: soleng-docker-release-local
           integrations:
             - name: ARTIFACTORY
           inputResources:
