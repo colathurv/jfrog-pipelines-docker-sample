@@ -1,4 +1,4 @@
-FROM vjnpipelines.jfrog.io/artifactory/soleng-docker-dev-local/ubuntu:18.04
+FROM ubuntu:18.04
 ADD . /
 RUN chmod +x /install.sh
 
