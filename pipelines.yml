@@ -11,8 +11,8 @@ resources:
     type: Image
     configuration:
       registry: ARTIFACTORY                     # <-- replace with your artifactory integration
-      sourceRepository: soleng-docker-dev-local        # <-- required if registry is Artifactory
-      imageName: vjnpipelines.jfrog.io/artifactory/soleng-docker-dev-local/dbp  # < -- replace with your image path and name
+      sourceRepository: vjnpipelines.jfrog.io/artifactory/soleng-docker-dev-local        # <-- required if registry is Artifactory
+      imageName: dbp  # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
