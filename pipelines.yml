@@ -11,7 +11,7 @@ resources:
     type: Image
     configuration:
       registry: ARTIFACTORY                                # <-- replace with your artifactory integration
-      sourceRepository: docker_local               # <-- required if registry is Artifactory
+      sourceRepository: ARTIFACTORY               # <-- required if registry is Artifactory
       imageName: kaloula.jfrog-pipelines.com/docker-local/dbp  # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
