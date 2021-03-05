@@ -12,7 +12,7 @@ resources:
     configuration:
       registry: ARTIFACTORY                     # <-- replace with your artifactory integration
       sourceRepository: docker_local        # <-- required if registry is Artifactory
-      imageName: vjnpipelines.jfrog.io/soleng-docker-dev-local/dbp  # < -- replace with your image path and name
+      imageName: 35.243.193.12:8082/soleng-docker-dev-local/dbp  # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
@@ -40,7 +40,7 @@ pipelines:
           affinityGroup: dbp_group
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: vjnpipelines.jfrog.io/soleng-docker-dev-local/dbp  # replace with your image path and name
+          dockerImageName: 35.243.193.12:8082/soleng-docker-dev-local/dbp  # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
             - name: dbp_repo
