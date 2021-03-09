@@ -58,11 +58,7 @@ pipelines:
             - name: docker_build
           outputResources:
             - name: dbp_image
-        execution:
-          onStart:
-            - echo "[TM] manually login to artifactory"
-            - echo ${int_ARTIFACTORY_apikey} | docker login --username ${int_ARTIFACTORY_username} --password-stdin ${int_ARTIFACTORY_url}
-
+      
       - name: publish_dbp_build
         type: PublishBuildInfo
         configuration:
